@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="sk">
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+        <meta content="#152822" name="theme-color">
+        <meta content="Prehľad obedových menu reštaurácií v okolí FEI STU." name="description">
+        <title>Obedovka | Menu pri FEI STU</title>
+        <link href="assets/favicon.svg" rel="icon" type="image/svg+xml">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.13/dayjs.min.js"></script>
+        <script defer="" src="js/parsers.js"></script>
+        <script defer="" src="js/app.js"></script>
+    </head>
+    <body>
+        <a class="skip-link" href="#main">Preskočiť na obsah</a>
+        <header class="site-header">
+            <div class="container header-inner">
+                <a aria-label="Obedovka, úvodná stránka" class="brand" href="index.html">
+                    <span aria-hidden="true" class="brand-icon">◕</span>
+                    obedovka
+                    <span class="brand-dot">.</span>
+                </a>
+                <nav aria-label="Hlavná navigácia">
+                    <ul class="nav-list">
+                        <li><a aria-current="page" class="nav-current" href="index.html">Denné menu</a></li>
+                        <li><a href="o-projekte.html">O projekte</a></li>
+                    </ul>
+                </nav>
+                <span class="header-chip">FEI STU · Bratislava</span>
+            </div>
+        </header>
+        <main class="container" id="main">
+            <section aria-labelledby="heading" class="hero">
+                <div class="hero-copy">
+                    <p class="eyebrow"><span class="status-dot"></span> OBEDY V OKOLÍ FAKULTY</p>
+                    <h1 id="heading">Dobrý obed. <br> <em>Bez hľadania.</em></h1>
+                    <p class="hero-sub">Tri obľúbené miesta, jeden prehľad. Pozri si, čo sa varí, a vyber si obed za pár sekúnd.</p>
+                    <div class="hero-meta"><span id="dateLabel">Tento týždeň</span> <span class="meta-divider">·</span> <span>3 reštaurácie</span></div>
+                </div>
+                <div aria-hidden="true" class="hero-art">
+                    <div class="plate"><span>🍲</span></div>
+                    <span class="hero-art-label">ČO BUDE DNES <br> NA OBED?</span>
+                </div>
+            </section>
+            <section aria-label="Nastavenia zobrazenia" class="toolbar">
+                <div class="toolbar-top">
+                    <div>
+                        <p class="section-kicker">VYBER SI DEŇ</p>
+                        <h2>Obedové menu <span class="heading-star">✳</span></h2>
+                    </div>
+                    <div class="mode-control">
+                        <span>Zdroj dát</span>
+                        <div aria-label="Zdroj dát" class="segmented" role="group">
+                            <button aria-pressed="true" class="source-button is-active" id="localMode" type="button">Lokálne</button>
+                            <button aria-pressed="false" class="source-button" id="onlineMode" type="button">Online</button>
+                        </div>
+                    </div>
+                </div>
+                <div aria-label="Vybrať deň" class="tabs" id="dayTabs" role="group">
+                    <button data-day="0" type="button">Po <span class="desktop-day">ndelok</span></button>
+                    <button data-day="1" type="button">Ut <span class="desktop-day">orok</span></button>
+                    <button data-day="2" type="button">St <span class="desktop-day">reda</span></button>
+                    <button data-day="3" type="button">Št <span class="desktop-day">vrtok</span></button>
+                    <button data-day="4" type="button">Pi <span class="desktop-day">atok</span></button>
+                    <button class="all-tab" data-day="all" type="button">Celý týždeň</button>
+                </div>
+                <div class="filters">
+                    <div
+                        role="group"
+                        aria-label="Filter reštaurácií"
+                        class="filters-list"
+                        id="restaurantFilters">
+                    </div>
+                    <div class="toolbar-actions">
+                        <button class="action-btn" id="refreshButton" type="button"><span aria-hidden="true">↻</span> Aktualizovať menu</button>
+                        <button class="action-btn subtle" id="clearButton" type="button">Vymazať dáta</button>
+                    </div>
+                </div>
+                <p class="notice" hidden="" id="modeNotice" role="status"></p>
+            </section>
+            <section aria-labelledby="resultsHeading" class="results">
+                <div class="results-heading">
+                    <div>
+                        <p class="section-kicker">DNEŠNÁ PONUKA</p>
+                        <h2 id="resultsHeading">Čo dobré sa varí?</h2>
+                    </div>
+                    <p class="result-count" id="resultCount"></p>
+                </div>
+                <div aria-live="polite" class="loading" hidden="" id="loading" role="status"><span class="spinner"></span> Načítavam obedové menu...</div>
+                <div aria-live="polite" class="menu-grid" id="menuResults"></div>
+            </section>
+        </main>
+        <footer class="site-footer">
+            <div class="container footer-inner">
+                <span class="footer-brand">obedovka <span>.</span></span>
+                <span>Školský projekt WEBTE1 · FEI STU</span>
+                <a href="o-projekte.html">Ako to funguje?</a>
+            </div>
+        </footer>
+    </body>
+</html>

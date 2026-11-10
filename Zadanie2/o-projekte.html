@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="sk">
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+        <title>O projekte | Obedovka</title>
+        <link href="assets/favicon.svg" rel="icon" type="image/svg+xml">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <a class="skip-link" href="#main">Preskočiť na obsah</a>
+        <header class="site-header">
+            <div class="container header-inner">
+                <a class="brand" href="index.html"><span aria-hidden="true" class="brand-icon">◕</span> obedovka <span class="brand-dot">.</span></a>
+                <nav aria-label="Hlavná navigácia">
+                    <ul class="nav-list">
+                        <li><a href="index.html">Denné menu</a></li>
+                        <li><a aria-current="page" class="nav-current" href="o-projekte.html">O projekte</a></li>
+                    </ul>
+                </nav>
+                <span class="header-chip">FEI STU · Bratislava</span>
+            </div>
+        </header>
+        <main class="container about-page" id="main">
+            <p class="section-kicker">O PROJEKTE</p>
+            <h1>Obedy na jednom <em>mieste.</em></h1>
+            <p class="about-lead">
+                Obedovka je študentský projekt na predmet WEBTE1. Zobrazuje obedové menu troch prevádzok v okolí FEI STU z uložených HTML stránok.
+            </p>
+            <div class="about-grid">
+                <article class="about-card">
+                    <span class="about-number">01</span>
+                    <h2>Zdroje dát</h2>
+                    <p>Jedálne lístky pochádzajú z verejne dostupných stránok reštaurácií. V projekte sa spracúvajú ich lokálne uložené HTML kópie.</p>
+                    <ul>
+                        <li><a href="https://whitedragon.sk/menucka/" rel="noopener noreferrer" target="_blank">White Dragon</a></li>
+                        <li><a href="https://eatandmeet.sk/tyzdenne-menu" rel="noopener noreferrer" target="_blank">Eat &amp; Meet</a></li>
+                        <li><a href="https://www.druzbacatering.sk/jedalny-listok/" rel="noopener noreferrer" target="_blank">Družba Cantina</a></li>
+                    </ul>
+                </article>
+                <article class="about-card">
+                    <span class="about-number">02</span>
+                    <h2>Ako spracovanie funguje</h2>
+                    <p>
+                        Fetch API načíta HTML súbory z priečinka
+                        <code>data/</code>
+                        . DOMParser ich prevedie na dokument. Samostatné funkcie vyberú jedlá z odsekov, kariet a tabuliek a prevedú ich na jednotné objekty.
+                    </p>
+                    <p>Výsledok sa ukladá do localStorage na aktuálny deň. Aktualizácia načíta súbory znova. Chyba jednej reštaurácie neblokuje ďalšie.</p>
+                </article>
+                <article class="about-card">
+                    <span class="about-number">03</span>
+                    <h2>Knižnice a technológie</h2>
+                    <p>
+                        HTML5, CSS3 a JavaScript bez frameworkov. CSS knižnica
+                        <strong>Normalize.css</strong>
+                        , JavaScriptová knižnica
+                        <strong>Day.js</strong>
+                        na prácu s dátumami. Textové písmo
+                        <strong>Poppins</strong>
+                        je priložené lokálne ako WOFF2 (SIL Open Font License 1.1).
+                    </p>
+                    <p>Prepínač Online je iba vizuálny. Online načítavanie ani proxy nie sú implementované; v kóde je len zakomentovaná ukážka.</p>
+                </article>
+            </div>
+            <div class="back-row"><a class="back-link" href="index.html">← Späť na obedové menu</a></div>
+        </main>
+        <footer class="site-footer">
+            <div class="container footer-inner">
+                <span class="footer-brand">obedovka <span>.</span></span>
+                <span>Školský projekt WEBTE1 · FEI STU</span>
+                <a href="index.html">Denné menu</a>
+            </div>
+        </footer>
+    </body>
+</html>
